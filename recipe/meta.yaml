@@ -18,12 +18,12 @@ build:
 
 requirements:
   build:
-    - make
     - {{ compiler('cxx') }}
     - {{ mpi }}
-  host:
+    - make
     - eigen =3.3.8
     - hypre
+  host:
     - {{ mpi }}
   run:
     - hypre
