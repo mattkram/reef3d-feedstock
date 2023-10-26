@@ -20,6 +20,7 @@ requirements:
   build:
     - make
     - {{ compiler('cxx') }}
+    - {{ mpi }}
   host:
     - eigen =3.3.8
     - hypre
