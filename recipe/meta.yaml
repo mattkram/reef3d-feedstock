@@ -25,6 +25,8 @@ requirements:
     - hypre
   host:
     - {{ mpi }}
+    - eigen =3.3.8
+    - hypre
   run:
     - hypre
     - {{ mpi }}
