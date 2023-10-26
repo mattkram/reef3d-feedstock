@@ -19,17 +19,15 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
-    - {{ mpi }}
     - make
-    - eigen =3.3.8
-    - hypre
+    - {{ mpi }}  # [mpi == 'openmpi' and build_platform != target_platform]
   host:
     - {{ mpi }}
     - eigen =3.3.8
     - hypre
   run:
-    - hypre
     - {{ mpi }}
+    - hypre
     - divemesh
     - libcxx
 
