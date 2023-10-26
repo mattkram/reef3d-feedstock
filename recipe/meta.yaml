@@ -22,6 +22,7 @@ requirements:
     - make
     - {{ mpi }}  # [mpi == 'openmpi' and build_platform != target_platform]
   host:
+    - {{ compiler('cxx') }}
     - {{ mpi }}
     - eigen =3.3.8
     - hypre
