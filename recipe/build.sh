@@ -1,6 +1,11 @@
 #!/bin/sh
 
-make -j "${CPU_COUNT}" CXX="mpicxx" HYPRE_DIR="${PREFIX}" EIGEN_DIR="${PREFIX}/include/eigen3"
+HYPRE_DIR="${PREFIX}"
+
+# Supplement conda-forge environment variable with extra paths
+LDFLAGS="$LDFLAGS -L ${HYPRE_DIR}/lib/ -lHYPRE"
+
+make -j "${CPU_COUNT}" CXX="mpicxx" HYPRE_DIR="${HYPRE_DIR}" EIGEN_DIR="${PREFIX}/include/eigen3" LDFLAGS="${LDFLAGS}"
 
 mkdir -p "${PREFIX}/bin"
 cp bin/REEF3D "${PREFIX}/bin/reef3d"
