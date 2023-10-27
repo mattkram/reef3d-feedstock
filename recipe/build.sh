@@ -1,6 +1,8 @@
 #!/bin/sh
 
 # Supplement conda-forge environment variable with extra paths
+export OPAL_PREFIX=${PREFIX}
+
 CXX="mpicxx"
 CXXFLAGS="$CXXFLAGS -w -std=c++11 -O3"
 LDFLAGS="-lHYPRE $LDFLAGS"
