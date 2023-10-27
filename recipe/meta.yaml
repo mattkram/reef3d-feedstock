@@ -18,11 +18,13 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - make
-    - {{ mpi }}  # [mpi == 'openmpi' and build_platform != target_platform]
+    - {{ mpi }}
+    - eigen =3.3.8
+    - hypre
   host:
-    - {{ compiler('cxx') }}
     - {{ mpi }}
     - eigen =3.3.8
     - hypre
