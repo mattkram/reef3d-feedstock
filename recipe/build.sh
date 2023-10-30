@@ -1,7 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 
-# Supplement conda-forge environment variable with extra paths
-export OPAL_PREFIX=${PREFIX}
+# If using openmpi, we need to set the prefix. This is critical for
+# cross-compilation of the osx-arm64 build.
+if [[ $mpi == "openmpi" ]]; then
+  export OPAL_PREFIX=${PREFIX}
+fi
 
 CXX="mpicxx"
 CXXFLAGS="$CXXFLAGS -w -std=c++11 -O3"
