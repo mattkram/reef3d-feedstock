@@ -13,20 +13,21 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
   build:
-    - make
     - {{ compiler('cxx') }}
+    - make
+    - {{ mpi }}
   host:
+    - {{ mpi }}
     - eigen =3.3.8
     - hypre
-    - {{ mpi }}
   run:
-    - hypre
     - {{ mpi }}
+    - hypre
     - divemesh
     - libcxx
 
