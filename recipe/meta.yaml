@@ -28,7 +28,7 @@ requirements:
   run:
     - {{ mpi }}
     - hypre
-    - divemesh
+    - divemesh =23.11
     - libcxx
 
 test:
