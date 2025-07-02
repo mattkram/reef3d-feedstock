@@ -33,6 +33,7 @@ echo "Cleaning up micromamba"
 rm -rf "${MAMBA_ROOT_PREFIX}" "${micromamba_exe}" || true
 ( endgroup "Provisioning base env with micromamba" ) 2> /dev/null
 
+
 ( startgroup "Configuring conda" ) 2> /dev/null
 echo "Activating environment"
 source "${MINIFORGE_HOME}/etc/profile.d/conda.sh"
