@@ -1,6 +1,6 @@
 {% set name = "reef3d" %}
-{% set version = "25.02" %}
-{% set sha256 = "b308e19b9ebf5600e2503037de1522629f71ff22c5199a771eb777f664237c13" %}
+{% set version = "25.05" %}
+{% set sha256 = "4e1ce7e6f64fe62cbf277d08490a195cb3f2d51fe2ca4fca682f9ccbf3111cd1" %}
 
 {% set mpi = mpi or 'openmpi' %}
 
@@ -9,7 +9,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/REEF3D/REEF3D/archive/refs/tags/{{ version }}.tar.gz
+  url: https://github.com/REEF3D/REEF3D/archive/refs/tags/{{ version }}_v2.tar.gz
   sha256: {{ sha256 }}
 
 build:
