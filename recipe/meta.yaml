@@ -9,7 +9,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/REEF3D/REEF3D/archive/refs/tags/{{ version }}_v2.tar.gz
+  url: https://github.com/REEF3D/REEF3D/archive/refs/tags/{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
