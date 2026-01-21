@@ -1,6 +1,6 @@
 {% set name = "reef3d" %}
-{% set version = "25.07" %}
-{% set sha256 = "1792806fbf9c531ab05a71bc2c55e76fa8f843b7952e9fd088c5ff0172a2e1e3" %}
+{% set version = "25.11" %}
+{% set sha256 = "a48c75f1d2ac079f5adca490512a1441062e95531a54fff10b968997ca1c2234" %}
 
 {% set mpi = mpi or 'openmpi' %}
 
@@ -37,8 +37,6 @@ requirements:
 test:
   commands:
     - test -f $PREFIX/bin/reef3d
-# Only test on osx because of missing mpi ORTE
-    - reef3d  # [osx]
 
 about:
   home: https://reef3d.wordpress.com/
